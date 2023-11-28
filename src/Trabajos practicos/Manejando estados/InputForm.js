@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function InputForm(props) {
   return (
-    <>
-      <div className="inputCard">
+    <div className="inputCard">
         <h3>Carga de producto</h3>
         <div>
           <form action="" onSubmit={props.handleSubmit}>
@@ -35,13 +34,12 @@ export default function InputForm(props) {
             </div>
             <label htmlFor="price">Precio</label>
             <div>
-              <button type="submit" onClick={props.handleAddProduct}>
+              <button className='btn btn-primary' type="submit" onClick={props.handleAddProduct}>
                 Aceptar
               </button>
             </div>
           </form>
         </div>
       </div>
-    </>
   );
 }

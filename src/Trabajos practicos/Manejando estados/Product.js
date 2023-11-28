@@ -24,8 +24,8 @@ function shoppingCartReducer(state, action) {
   }
 }
 
-function getTotalSelectedAmountPerProduct(cart, productName) {
-  return cart.filter((item) => item.name === productName).length;
+function getTotalSelectedAmountPerProduct(cart, productId) {
+  return cart.filter((item) => item.id === productId).length;
 }
 
 export default function Product({ products }) {
@@ -42,34 +42,32 @@ export default function Product({ products }) {
   }
 
   return (
-    <>
-      <div className="wrapper">
-        <div className="shoppingcart">
-          <div>
-            <i className="fa fa-3x fa-shopping-cart"></i>
-          </div>
-          <strong>Shopping Cart</strong>
-          <div>{cart.length} total items</div>
-          <div>Total price: ${getTotal(cart)}</div>
+    <div className="wrapper">
+      <div className="shoppingcart">
+        <div>
+          <i className="fa fa-3x fa-shopping-cart"></i>
         </div>
-        <div className="listGrid">
-          {products.map((product) => (
-            <div key={product.name}>
-              <div className="product">
-                <span>ID: {product.id}</span>
-                <span>Nombre: {product.name}</span>
-                <span>Descripcion: {product.desc}</span>
-                <span>$ {product.price}</span>
-              </div>
-              <div className="selectproduct">
-                <button onClick={() => add(product)}>+</button>
-                <b>{getTotalSelectedAmountPerProduct(cart, product.name)}</b>
-                <button onClick={() => remove(product)}>-</button>
-              </div>
-            </div>
-          ))}
-        </div>
+        <strong>Shopping Cart</strong>
+        <div>{cart.length} total items</div>
+        <div>Total price: ${getTotal(cart)}</div>
       </div>
-    </>
+      <div className="listGrid">
+        {products.map((product) => (
+          <div key={product.name}>
+            <div className="product">
+              <span>ID: {product.id}</span>
+              <span>Nombre: {product.name}</span>
+              <span>Descripcion: {product.desc}</span>
+              <span>$ {product.price}</span>
+            </div>
+            <div className="selectproduct">
+              <button className='btn btn-primary' onClick={() => add(product)}>+</button>
+              <h3>{getTotalSelectedAmountPerProduct(cart, product.id)}</h3>
+              <button className='btn btn-primary' onClick={() => remove(product)}>-</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
