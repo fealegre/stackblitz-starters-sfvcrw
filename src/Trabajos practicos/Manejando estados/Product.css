@@ -1,0 +1,47 @@
+.wrapper {
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px #1687d933;
+}
+
+.shoppingcart {
+  border-style: solid;
+  border-color: rgb(209, 91, 12);
+  text-align: center;
+  background-color: #e8ebeb;
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px #1687d933;
+}
+
+.product span {  
+  display: block;
+  font-size: 20px;
+}
+
+.selectproduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: ‘Open Sans’;
+  font-weight: 900;
+  color: #202020;
+  cursor: pointer;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+

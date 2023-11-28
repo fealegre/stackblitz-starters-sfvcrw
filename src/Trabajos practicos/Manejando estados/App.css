@@ -1,0 +1,54 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.product {
+  width: 320px;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.inputCard {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 5px;
+  background-color: deepskyblue;
+  border-radius: 5px;
+}
+
+.formField {
+  margin-top: 20px;
+}
+
+.formField input {
+  border-radius: 5px;
+}
+
+.formField label {
+  font-size: small;
+  padding: 2px;
+}
+
+.listCard {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 30px;
+}
+
